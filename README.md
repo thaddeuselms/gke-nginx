@@ -18,8 +18,6 @@ NAME               CLUSTER-IP     EXTERNAL-IP       PORT(S)                     
 nginx-ingress-lb   x.x.x.x        x.x.x.x          
 ```
 
-The ingress controller adopts the static IP of the Service by passing the `--publish-service` flag.
-
 ```console
 $ kubectl create -f nginx-controller-deamonset.yaml
 deployment "nginx-ingress-controller" created
