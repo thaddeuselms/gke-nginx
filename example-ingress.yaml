@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - secretName: tls-secret
+    hosts:
+    - host1.com
+    - host2.com
+  rules:
+  - host: host1.com
+    http:
+      paths:
+      - backend:
+          serviceName: host1-service
+          servicePort: 80
+  - host: host2.com
+    http:
+      paths:
+      - backend:
+          serviceName: host2-service
+          servicePort: 80  
+  
