@@ -39,7 +39,7 @@ and promote the IP to static (promotion works differently for cloudproviders, pr
 $ gcloud compute addresses create nginx-ingress-lb --addresses 104.154.109.191 --region us-central1
 Created [https://www.googleapis.com/compute/v1/projects/kubernetesdev/regions/us-central1/addresses/nginx-ingress-lb].
 ```
-## Configuration Ingress to use this nginx instead of GCE
+## Configure Ingress to use this nginx instead of GCE
 
 Every Ingress created with the `ingress.class` annotation set to
 `nginx` will use this controller. Changing this to 'gce' will use the GCE controller
